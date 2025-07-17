@@ -11,7 +11,10 @@ My personal collection of zen browser themes &amp; tweaks, most of this was not 
 
 This theme includes some extra settings that Natsumi doesn't include, you can change them by adding these entries into your `about:config` page
 *For instructions and other options check the Natsumi GitHub*
+
 `natsumi.urlbar.texture` (boolean) Toggles the grain effect on the url bar
+
+---
 
 This theme changes the interface of zen browser and some default pages, for better consistency across your browsing experience I recommend the [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/) extension and the [Catppuccin](https://github.com/catppuccin/catppuccin?tab=readme-ov-file) repo.
 
