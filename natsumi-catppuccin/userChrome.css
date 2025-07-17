@@ -1,11 +1,13 @@
 @import "natsumi/natsumi.css";
+/*--------------------*/
 
 /*Moves the titlebar buttons a lil closer to the edge, but it's only for the minimal exit buttons mod */
 .titlebar-buttonbox {
     left: 10px;
   }
+/*--------------------*/
 
-/*custom icons*/
+/*extension and url bar icon tweaks*/
 /*  Menu Button */
 #PanelUI-menu-button image{
     list-style-image: url("https://raw.githubusercontent.com/YouCanTouCan/Zen-Setup/refs/heads/main/ToucanTweaks/modules/Icons/Zen-Logo.svg") !important;
@@ -15,19 +17,25 @@
     list-style-image: url("https://raw.githubusercontent.com/YouCanTouCan/Zen-Setup/refs/heads/main/ToucanTweaks/modules/Icons/Extension-Icon.png") !important;
     }
 
-/*  ProtonPass */
-#78272b6fa58f4a1abaac99321d503a20_proton_me-BAP image{
-    list-style-image: url("https://raw.githubusercontent.com/YouCanTouCan/Zen-Setup/refs/heads/main/ToucanTweaks/modules/Icons/ProtonPass.svg") !important;
-    }
+/* extension icons */
+.webextension-browser-action .toolbarbutton-icon,
+.webextension-page-action .toolbarbutton-icon {
+    filter: grayscale(100%) brightness(0.8) contrast(1.1);
+    transition: filter 0.3s ease;
+}
 
-/* uBlock Origin */
- #ublock0_raymondhill_net-BAP image{
-     list-style-image: url("https://raw.githubusercontent.com/YouCanTouCan/Zen-Setup/5652c5cc775171986b46ac451925934c3fc17c84/ToucanTweaks/modules/Icons/uBlock-Origin.svg") !important;
+.webextension-browser-action:hover .toolbarbutton-icon,
+.webextension-page-action:hover .toolbarbutton-icon {
+    filter: none;
 }
-/* Dark Reader */
- #addon_darkreader_org-BAP image{
-     list-style-image: url("https://raw.githubusercontent.com/YouCanTouCan/Zen-Setup/5652c5cc775171986b46ac451925934c3fc17c84/ToucanTweaks/modules/Icons/Dark-Reader.svg") !important;
+
+/* hide some urlbar icons */
+#identity-box,
+#tracking-protection-icon-container,
+#permissions-granted-icon {
+  display: none !important;
 }
+/*--------------------*/
 
 /* Animate new tab appear animation *//*Cool*/
 #vertical-pinned-tabs-container, #tabbrowser-arrowscrollbox {
@@ -42,7 +50,7 @@
     transform: translateY(-10px);
   }
 }
-
+/*--------------------*/
 
 /* Catppuccin Mocha Mauve userChrome.css*/
 
@@ -154,6 +162,7 @@
     --identity-icon-color: #cba6f7 !important;
   }
 }
+/*--------------------*/
 
 /* ==== Tab groups ==== */
 /* https://github.com/Anoms12/Advanced-Tab-Groups */
@@ -554,8 +563,6 @@ tab-group:not([split-view-group]) {
   }
 }
 
-
-
 /* fix icon padding */
 .tabbrowser-tab[zen-glance-tab] {
   .tab-icon-stack {
@@ -570,3 +577,4 @@ tab-group:not([split-view-group]) {
     padding: 0 !important;
   }
 }
+
